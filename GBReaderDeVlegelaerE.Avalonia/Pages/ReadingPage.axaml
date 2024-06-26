@@ -1,0 +1,47 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Pages.ReadingPage">
+    <StackPanel Margin="8" Spacing="8">
+        <TextBlock FontSize="24" FontWeight="Bold" Foreground="Blue">Lecture du livre</TextBlock>
+            <Grid ColumnDefinitions="150*, 100, 400" MinWidth="500" HorizontalAlignment="Center">
+                <!--Lecture du livre -->
+                <StackPanel Grid.Column="0">
+                    <Border Background="Gray" BorderThickness="2" BorderBrush="Black" CornerRadius="2" MinWidth="300" MinHeight="400" MaxWidth="500" MaxHeight="500">
+                        <StackPanel>
+                            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" TextAlignment="Center">Page</TextBlock>
+                            <WrapPanel Margin="15">
+                                <TextBlock Foreground="White" FontWeight="Bold" FontSize="14">Numéro de la page : </TextBlock>
+                                <TextBlock x:Name="NumPageFrom" Foreground="White" TextWrapping="Wrap"></TextBlock>
+                            </WrapPanel>
+                            <TextBlock Margin="15" FontWeight="Bold" TextDecorations="underline" Foreground="White" FontSize="14">Texte de la page</TextBlock>
+                            <Border Margin="5" BorderThickness="2" BorderBrush="Black" CornerRadius="2" MinWidth="150" MinHeight="250">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" Height="250">
+                                    <TextBlock Margin="1" x:Name="ContentOfThePage" FontSize="13" Foreground="White" TextWrapping="Wrap"></TextBlock>
+                                </ScrollViewer>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                    <Button x:Name="RestartReading" Click="RestartReading_OnClick" Margin="0, 25, 0, 0" HorizontalAlignment="Center" Foreground="White" Background="Red" IsVisible="False">Recommencer la lecture</Button>
+                </StackPanel>
+                <!--Liste des choix -->
+                <StackPanel Grid.Column="2">
+                    <Border Background="Gray" BorderThickness="2" BorderBrush="Black" CornerRadius="2" MinWidth="300" MinHeight="400" MaxWidth="500" MaxHeight="500">
+                        <StackPanel>
+                            <TextBlock FontSize="20" FontWeight="Bold" Foreground="White" TextAlignment="Center">Liste des choix</TextBlock>
+                            <Border Margin="5" BorderThickness="2" BorderBrush="Black" CornerRadius="2" MinWidth="150" MinHeight="250">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" Height="350">
+                                    <StackPanel x:Name="ChoicesContainer" VerticalAlignment="Center">
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </Border>
+                        </StackPanel>
+                    </Border>
+                    <Button x:Name="ComeBackToWelcomePage" Click="ComeBackToWelcomePage_OnClick" Margin="0, 25, 0, 0" HorizontalAlignment="Center" Foreground="White" Background="Blue" IsVisible="True">Revenir à l'accueil</Button>
+                </StackPanel>
+            </Grid>
+         <TextBlock x:Name="ErrorMessage" FontWeight="Bold" Foreground="Red" TextWrapping="Wrap" FontSize="24" HorizontalAlignment="Center"></TextBlock>
+    </StackPanel>
+</UserControl>

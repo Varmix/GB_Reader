@@ -1,0 +1,32 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Controls.BookDetailsView">
+            <Border BorderThickness="2" BorderBrush="Black" CornerRadius="3" MinWidth="300" MinHeight="300" MaxWidth="500" MaxHeight="500">
+                <StackPanel Background="Gray"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch"
+                            MinWidth="300" MinHeight="300"
+                            Spacing="4">
+                    <WrapPanel>
+                        <TextBlock x:Name="TitleLabelDetail" Foreground="White" FontWeight="Bold" FontSize="14">Titre : </TextBlock>
+                        <TextBlock x:Name="TitleBookDetail" Foreground="White" TextWrapping="Wrap"></TextBlock>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock x:Name="IsbnLabelDetail" Foreground="White" FontWeight="Bold" FontSize="14"> Isbn :</TextBlock>
+                        <TextBlock x:Name="IsbnBookDetail" Foreground="White"></TextBlock>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock x:Name="SummaryLabelDetail" Foreground="White" FontWeight="Bold" FontSize="14">Résumé : </TextBlock>
+                        <TextBlock x:Name="SummaryBookDetail" Foreground="White"></TextBlock>
+                    </WrapPanel>
+                    <WrapPanel>
+                        <TextBlock x:Name="AuthorLabelDetail" Foreground="White" FontWeight="Bold" FontSize="14">Auteur : </TextBlock>
+                        <TextBlock x:Name="AuthorBookDetail" Foreground="White" TextWrapping="Wrap"></TextBlock>
+                    </WrapPanel>
+                    <Button x:Name="DisplayBook" Click="ContinueToRead_OnClick" HorizontalAlignment="Center" Foreground="White" Background="Blue">Démarrer ou reprendre la lecture</Button>
+                </StackPanel>
+            </Border>
+</UserControl>
