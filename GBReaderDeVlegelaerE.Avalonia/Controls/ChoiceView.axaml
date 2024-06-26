@@ -1,0 +1,13 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Controls.ChoiceView">
+   <Border Margin="5" Background="Gray" BorderThickness="2" BorderBrush="Black" CornerRadius="2">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="ContentOfChoice" Foreground="White" TextWrapping="Wrap"></TextBlock>
+            <Button x:Name="ChoiceViewButton" Click="OnClick_DestinationPage" HorizontalAlignment="Center" Foreground="White" Background="Blue">S'y diriger</Button>
+        </StackPanel>
+    </Border>
+</UserControl>

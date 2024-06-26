@@ -1,0 +1,74 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Pages.WelcomePage">
+    <StackPanel Margin="8" Spacing="8">
+            <!-- Header -->
+            <!-- Titre -->
+            <Grid ColumnDefinitions="400, 100, 400*" Width="1350" HorizontalAlignment="Left">
+                <TextBlock Grid.Column="0" FontSize="24" FontWeight="Bold" Foreground="Blue">Livre de jeux</TextBlock>
+                <TextBlock Grid.Column="2" x:Name="ErrorMsg" FontSize="18" FontWeight="Bold" Foreground="Red"></TextBlock>
+            </Grid>
+            <!-- Barre de recherche avec son bouton -->
+            <Grid x:Name="HeaderBottomMainTitle" ColumnDefinitions="400 ,4,128, 4*, 128" Width="1350" HorizontalAlignment="Left">
+                <TextBox x:Name="SearchWord" Grid.Column="0" Watermark="L'assommoir" BorderThickness="2"></TextBox>
+                <Button x:Name="SearchButton"
+                        Click="Search_OnClick"
+                        Grid.Column="2"
+                        Padding="7"
+                        Background="blue"
+                        Foreground="white"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Center">
+                    Rechercher
+                </Button>
+                <Button  x:Name="SeeStatistics"
+                        Click="ViewStatistics_OnClick"
+                        Grid.Column="4"
+                        Padding="7"
+                        Background="blue"
+                        Foreground="white"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Center">
+                    Voir statistiques
+                </Button>
+            </Grid>
+            <TextBlock x:Name="AlertDisplay" IsVisible="False" HorizontalAlignment="Center"
+                       FontWeight="Bold" Foreground="Red" FontSize="25"></TextBlock>
+            <TextBlock x:Name="BooksTitle" FontWeight="Bold" FontSize="20" IsVisible="False">Liste des livres : </TextBlock>
+            <!-- Conteneur de liste des livres + le livre détaille -->
+            <StackPanel Orientation="Horizontal" Spacing="100">
+                <!-- Liste des livres -->
+                <StackPanel HorizontalAlignment="Left" Spacing="2">
+                    <TextBlock x:Name="WarningDisplay" IsVisible="False"
+                               FontWeight="Bold" Foreground="Red" FontSize="14"/>
+                    <Border x:Name="BorderBookList" IsVisible="False" Padding="2" BorderThickness="2" BorderBrush="Black" CornerRadius="3"  Height="560" MaxWidth="520">
+                <ScrollViewer VerticalScrollBarVisibility="Visible" Height="550">
+                    <WrapPanel x:Name="AllBooksPanel">
+                    </WrapPanel>
+                </ScrollViewer>
+               </Border>
+            </StackPanel>
+                <!-- Livre détaillé -->
+                <StackPanel x:Name="BookDetailContainer" VerticalAlignment="Center" HorizontalAlignment="Right" IsVisible="False">
+                    <TextBlock FontWeight="Bold" FontSize="20">Livre sélectionné : </TextBlock>
+                    <WrapPanel x:Name="BookDetailPanel">
+                    </WrapPanel>
+                </StackPanel>
+            </StackPanel>
+            <!-- Quitter l'application dans les cas où la liste est vide ou le fichier json n'existe pas -->
+            <Button x:Name="QuitApplication" 
+                    Click="QuitApplication_OnClick"
+                    Padding="7"
+                    Background="Red"
+                    Foreground="white"
+                    IsVisible="False"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    HorizontalContentAlignment="Center">Quitter l'application</Button>
+            </StackPanel>
+</UserControl>

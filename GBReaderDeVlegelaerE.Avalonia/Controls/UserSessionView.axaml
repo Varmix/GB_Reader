@@ -1,0 +1,33 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Controls.UserSessionView">
+    <StackPanel>
+    <Border BorderThickness="2" BorderBrush="Blue" CornerRadius="3" Margin="2">
+        <StackPanel Background="Gray"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    Spacing="4"
+        >
+            <WrapPanel Margin="3 0 0 0">
+                <TextBlock Foreground="White" FontWeight="Bold" FontSize="14">Isbn du livre : </TextBlock>
+                <TextBlock x:Name="IsbnStat" Foreground="White" TextWrapping="Wrap"></TextBlock>
+            </WrapPanel>
+            <WrapPanel Margin="3 0 0 0">
+                <TextBlock  Foreground="White" FontWeight="Bold" FontSize="14"> Dernière page lue :</TextBlock>
+                <TextBlock x:Name="LastPageStat" Foreground="White"></TextBlock>
+            </WrapPanel >
+            <WrapPanel Margin="3 0 0 0">
+                <TextBlock  Foreground="White" FontWeight="Bold" FontSize="14"> Date de début de lecture :</TextBlock>
+                <TextBlock x:Name="StartReadingStat" Foreground="White"></TextBlock>
+            </WrapPanel>
+            <WrapPanel Margin="3 0 0 0">
+                <TextBlock Foreground="White" FontWeight="Bold" FontSize="14">Dernière mise à jour de la session : </TextBlock>
+                <TextBlock x:Name="LastUpdateStat" Foreground="White"></TextBlock>
+            </WrapPanel>
+        </StackPanel>
+    </Border>
+    </StackPanel>
+</UserControl>

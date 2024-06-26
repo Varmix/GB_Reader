@@ -1,0 +1,17 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Pages.StatisticsPage">
+     <StackPanel Margin="8" Spacing="8">
+         <Grid ColumnDefinitions="400, 100*, 200">
+             <TextBlock Grid.Column="0" FontSize="24" FontWeight="Bold" Foreground="Blue">Vos statistiques de lecture</TextBlock>
+             <Button Grid.Column="2" x:Name="ComeBackToWelcomePage" Click="ComeBackToWelcomePage_OnClick"  Foreground="White" Background="Blue" IsVisible="True">Revenir à l'accueil</Button>
+         </Grid>
+             <!-- Statistiques -->
+         <WrapPanel x:Name="StatsContainer">
+             
+         </WrapPanel>
+     </StackPanel>
+</UserControl>

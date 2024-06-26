@@ -1,0 +1,29 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderDeVlegelaerE.Avalonia.Controls.BookElementView">
+    <Border BorderThickness="2" BorderBrush="Blue" MinWidth="245" MinHeight="200" CornerRadius="3" Margin="2">
+        <StackPanel Background="Gray"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Stretch"
+                    MinWidth="215" MinHeight="200"
+                    Spacing="4"
+        >
+            <WrapPanel>
+                <TextBlock x:Name="TitleLabel" Foreground="White" FontWeight="Bold" FontSize="14">Titre : </TextBlock>
+                <TextBlock x:Name="TitleBook" Foreground="White" TextWrapping="Wrap"></TextBlock>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock x:Name="IsbnLabel" Foreground="White" FontWeight="Bold" FontSize="14"> Isbn :</TextBlock>
+                <TextBlock x:Name="IsbnBook" Foreground="White"></TextBlock>
+            </WrapPanel>
+            <WrapPanel>
+                <TextBlock x:Name="AuthorLabel" Foreground="White" FontWeight="Bold" FontSize="14">Auteur : </TextBlock>
+                <TextBlock x:Name="AuthorBook" Foreground="White"></TextBlock>
+            </WrapPanel>
+            <Button x:Name="DisplayBook" Click="ShowBook_OnClick" HorizontalAlignment="Center" Foreground="White" Background="Blue">Visualiser</Button>
+        </StackPanel>
+    </Border>
+</UserControl>
